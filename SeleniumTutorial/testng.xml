@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+<!--    <parameter name="URL" value="google.com"/>-->
+    <listeners>
+        <listener class-name="testNG.Listeners"/>
+    </listeners>
+    <test name="personal Loan">
+        <parameter name="URL" value="personalLoan.com"/>
+        <parameter name="APIKEY/username" value="123456"/>
+        <classes>
+            <class name="testNG.Demo1">
+                <methods>
+                    <include name="tataMotor"/>
+                </methods>
+            </class>
+            <class name="testNG.Demo2">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+            <class name="testNG.Demo3">
+<!--                <methods>-->
+<!--                    <include name="WebloginCarLoan"/>-->
+<!--                    <include name="MobileLoginLoan"/>-->
+<!--                    <include name="LoginAPIcarLoan"/>-->
+<!--                    <include name="MobileSignInCarLoan"/>-->
+<!--                    <include name="MobileSignOutCarLoan"/>-->
+<!--                </methods>-->
+            </class>
+            <class name="testNG.Demo4">
+                <methods>
+                    <include name="WebloginHomeLoan"/>
+                    <include name="MobileLoginHomeLoan"/>
+                    <include name="LoginAPIHomeLoan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Interest rate">
+        <parameter name="URL" value="carloan.com"/>
+        <classes>
+            <class name="testNG.Demo5">
+
+            </class>
+        </classes>
+    </test>
+</suite>
